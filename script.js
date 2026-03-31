@@ -76,7 +76,7 @@ async function checkFraud() {
     };
 
     try {
-        const res = await fetch("https://your-app-name.onrender.com/predict", { // 🔥 REPLACE THIS
+        const res = await fetch("https://frauddetectorbackend.onrender.com/predict", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
