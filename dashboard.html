@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<h1>💳 Fraud Monitoring Dashboard</h1>
+
+<div class="grid">
+
+    <!-- Transaction Card -->
+    <div class="card">
+        <h3>New Transaction</h3>
+
+        <input type="number" id="amount" placeholder="Amount">
+        <input type="number" id="txns" placeholder="Transactions/hr">
+        <input type="number" id="hour" placeholder="Hour">
+        
+        <select id="location">
+            <option value="IN">IN</option>
+            <option value="OUT">OUT</option>
+        </select>
+
+        <button onclick="checkFraud()">Analyze</button>
+
+        <div id="result"></div>
+        <div id="details"></div>
+    </div>
+
+    <!-- Graph -->
+    <div class="card">
+        <h3>📈 Risk Trend</h3>
+        <canvas id="riskChart"></canvas>
+    </div>
+
+    <!-- Pie Chart -->
+    <div class="card">
+        <h3>📊 Fraud Distribution</h3>
+        <canvas id="pieChart"></canvas>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
